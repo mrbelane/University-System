@@ -1,0 +1,17 @@
+{
+  "name": "admin-dashboard",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "compile": "node-sass scss/custom-styles.scss css/style.css -w",
+    "compile:sass": "node-sass scss/login.scss css/login.css -w",
+    "resume": "node-sass scss/resume.scss css/resume.css -w"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "node-sass": "^4.14.1"
+  }
+}

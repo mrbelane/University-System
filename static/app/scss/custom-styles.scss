@@ -1,0 +1,71 @@
+// Your custom variables
+@import "navbar";
+@import "material_form";
+@import "not_found";
+@import "student";
+@import "custom-variables";
+
+
+
+/*#intro {
+  font-size: 18px;
+
+  //height: 100%;
+  background: url("https://mdbootstrap.com/img/Photos/Horizontal/Nature/full%20page/img%20%283%29.jpg") no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}*/
+
+.table {
+  font-family: Vazir;
+  font-size: 17px;
+}
+
+.filter {
+  margin: 5px 0;
+  float: left;
+  width: 35%;
+  height: 48px;
+}
+
+.main {
+  margin-top: 5rem;
+
+  .table-courses {
+    margin-bottom: 40px;
+  }
+
+  .gradiant-header1 {
+    background: #008BC8; /* fallback for old browsers */
+    //background: -webkit-linear-gradient(to top, #f2fcfe, #1c92d2); /* Chrome 10-25, Safari 5.1-6 */
+    //background: linear-gradient(to top, #f2fcfe, #1c92d2); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+  }
+
+  .gradiant-header {
+    background: #00896F; /* fallback for old browsers */
+    //background: -webkit-linear-gradient(to left, #f2fcfe, #1c92d2); /* Chrome 10-25, Safari 5.1-6 */
+    //background: linear-gradient(to left, #f2fcfe, #1c92d2); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+  }
+}
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+}
+
+::-webkit-scrollbar-thumb {
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+}
+
+@media (min-width: 1200px) {
+  .container, .container-lg, .container-md, .container-sm, .container-xl {
+    max-width: 1400px;
+
+  }
+}

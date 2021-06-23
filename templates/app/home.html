@@ -1,0 +1,86 @@
+{% extends 'app/base.html' %}
+
+{% if user.is_authenticated %}
+
+    {% block title %}صفحه رزومه{% endblock %}
+
+    {% load static %}
+    {% block content %}
+
+        <div class="container d-flex justify-content-center">
+            <div class="row">
+                <div class="col-lg-6 col-sm-12">
+                    <div class="profile-card hoverable d-flex flex-column justify-content-center mb-5">
+                        <div class="top-card"></div>
+                        <div class="picture align-self-center">
+                            <img src="{% static 'app/img/metoo.jpg' %}" alt="profile uesr"/>
+                        </div>
+                        <div class="full-name"><p>مسعود مختاری</p></div>
+                        <div class="job align-self-end"><p>برنامه نویس نود جی اس</p></div>
+                        <div class="card-content d-flex  justify-content-around text-right">
+                            <div class="info-right">
+                                <p>نام</p>
+                                <p>نام خانوادگی</p>
+                                <p>شماره دانشجویی</p>
+                                <p>عضو تیم زیرساخت در شرکت</p>
+                            </div>
+                            <div class="info-left">
+                                <p>مسعود</p>
+                                <p>مختاری</p>
+                                <p>9512762550</p>
+                                <p>پارت</p>
+                            </div>
+                        </div>
+                        <div class="d-flex justify-content-center">
+                            <ul class="social-network social-circle">
+                                <li><a href="#" class="icoTelegram" title="تلگرام"><i class="fab fa-telegram"></i></a>
+                                </li>
+                                </li>
+                                <li><a href="#" class="icoInstagram" title="اینستاگرام"><i class="fab fa-instagram"></i></a>
+                                </li>
+                                <li><a href="https://www.linkedin.com/in/masoud-mokhtari-1061a6170" class="icoLinkedin" title="لینکدین"><i class="fab fa-linkedin"></i></a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 col-sm-12">
+                    <div class="profile-card d-flex flex-column justify-content-center">
+                        <div class="top-card"></div>
+                        <div class="picture align-self-center">
+                            <img src="{% static 'app/img/Avatar.jpg' %}" alt="profile ali"/>
+                        </div>
+                        <div class="full-name"><p>علی رحیمی</p></div>
+                        <div class="job align-self-end"><p>برنامه نویس اندروید</p></div>
+                        <div class="card-content d-flex flex-row  justify-content-around text-right">
+                            <div class="info-right">
+                                <p>نام</p>
+                                <p>نام خانوادگی</p>
+                                <p>شماره دانشجویی</p>
+                                <p>عضو تیم اندروید در شرکت</p>
+                            </div>
+                            <div class="info-left">
+                                <p>علی</p>
+                                <p>رحیمی</p>
+                                <p>9512762561</p>
+                                <p>راژمان</p>
+                            </div>
+                        </div>
+                        <div class="d-flex justify-content-center">
+                            <ul class="social-network social-circle">
+                                <li><a href="#" class="icoTelegram" title="تلگرام"><i class="fab fa-telegram"></i></a>
+                                </li>
+                                </li>
+                                <li><a href="#" class="icoInstagram" title="اینستاگرام"><i class="fab fa-instagram"></i></a>
+                                </li>
+                                <li><a href="#" class="icoLinkedin" title="لینکدین"><i class="fab fa-linkedin"></i></a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    {% endblock %}
+
+{% endif %}

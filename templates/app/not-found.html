@@ -1,0 +1,36 @@
+{#{% extends 'app/base.html' %}#}
+{% load  static %}
+<heade>
+
+    <script type="text/javascript" src="{% static 'app/js/jquery.min.js' %}"></script>
+    <link rel="stylesheet" href="{% static 'app/css/bootstrap.min.css' %}">
+    <link rel="stylesheet" href="{% static 'app/css/bootstrap-rtl.min.css' %}">
+    <link rel="stylesheet" href="{% static 'app/css/bootstrap-rtl.css' %}">
+    <!-- Material Design Bootstrap -->
+    <link rel="stylesheet" href="{% static 'app/css/mdb.min.css' %}">
+    <!-- Your custom styles (optional) -->
+    <link rel="stylesheet" href="{% static 'app/css/style.css' %}">
+
+</heade>
+
+
+<body>
+
+{#{% block content %}#}
+<div id="notfound">
+    <div class="notfound">
+        <h3 class="h2 font-weight-bold">حرص نخور، قهوه بخور</h3>
+        <div class="notfound-404">
+
+            <h1><span>4</span><span>0</span><span>4</span></h1>
+        </div>
+        <h2>متاسفانه صفحه‌ای که دنبالش هستید پیدا نشد:(.
+        </h2>
+        <a href="/home" class="btn btn-lg bg-dark white-text waves-light">برو به صفحه‌ی اصلی</a>
+
+    </div>
+</div>
+
+{#{% endblock %}#}
+
+</body>

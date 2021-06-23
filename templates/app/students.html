@@ -1,0 +1,114 @@
+{% extends "app/base.html" %}
+
+{% block title %}صفحه ی دانشجویان{% endblock %}
+
+{% block content %}
+    <div class="students d-flex flex-wrap justify-content-between">
+        {% if students %}
+            {% for key , value in students.items %}
+                {% if value.students|length > 0 %}
+                    <!--Grid row-->
+                    <div class="row">
+                        <!--Grid column-->
+                        <div class="col-md col-sm-12">
+                            <div>
+                                <a href="/teachers?major={{ value.major }}"
+                                   class="btn btn-primary teacher-btn hoverable waves-effect"> اساتید
+                                    رشته‌ی {{ value.name }}</a>
+                                <input type="search" class="filter form-control light-table-filter"
+                                       data-table="order-table-{{ value.name }}" placeholder="دنبال کی میگردی؟">
+                                <div class="text-nowrap content-table">
+                                    <table class="table order-table-{{ value.name }} table-bordered table-striped table-responsive-sm">
+                                        <caption class="text-center bg-dark text-white"
+                                                 style="caption-side:top">{{ value.name }}
+                                        </caption>
+                                        <thead class="thead-dark">
+                                        <tr class="">
+                                            <th>نام</th>
+                                            <th scope="col" class="w-100">نام خانوادگی</th>
+                                            <th scope="col" class="100">شماره دانشجویی</th>
+                                            <th scope="col">تعداد واحد</th>
+                                            <th scope="col">مقطع تحصیلی</th>
+                                            <th scope="col"></th>
+                                        </tr>
+                                        </thead>
+                                        <tbody>
+                                        {% for student in value.students %}
+                                            <tr>
+                                                <td>{{ student.first_name }}</td>
+                                                <td>{{ student.last_name }}</td>
+                                                <td>{{ student.student_id }}</td>
+                                                <td>{{ student.unit }}</td>
+                                                <td>{{ student.grade }}</td>
+                                                <td class="text-center table-light">
+                                                    <a class=" " href="/editProfile?id={{ student.student_id }}">
+                                                        <span class="far fa-edit"></span> ویرایش
+                                                    </a>
+                                                </td>
+                                            </tr>
+                                        {% endfor %}
+
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                        <!--Grid column-->
+                    </div>
+
+                    <!--Grid row-->
+                {% endif %}
+            {% endfor %}
+        {% endif %}
+    </div>
+
+{% endblock %}
+
+{% comment %}  <section class="student">
+                        <a href="/teachers?major={{ value.major }}" class="btn btn-primary teacher-btn"> اساتید
+                            رشته‌ی {{ value.name }}</a>
+                        <input type="search" class="filter form-control light-table-filter"
+                               data-table="order-table-{{ value.name }}" placeholder="دنبال کی میگردی؟">
+
+                        <div class="tbl-header hoverable">
+                            <table class="table this-table" cellpadding="1" cellspacing="1">
+                                <caption class="text-center bg-dark text-white"
+                                         style="caption-side:top">{{ value.name }}
+                                </caption>
+                                <thead class="thead-dark">
+                                <tr class="">
+                                    <th scope="col" class="text-center">ردیف</th>
+                                    <th scope="col" class="text-center">نام</th>
+                                    <th scope="col" class="text-center">نام خانوادگی</th>
+                                    <th scope="col" class="text-center">شماره دانشجویی</th>
+                                    <th scope="col" class="text-center">تعداد واحد</th>
+                                    <th scope="col" class="text-center">مقطع تحصیلی</th>
+                                    <th scope="col" class="text-center"></th>
+                                </tr>
+                                </thead>
+                            </table>
+                        </div>
+                        <div class="tbl-content hoverable">
+                            <table class="" cellpadding="1" cellspacing="1">
+                                <tbody>
+                                {% for student in value.students %}
+                                        <tr>
+                                            <td class="text-center">{{ student.student_id }}</td>
+                                            <td class="text-center">{{ student.first_name }}</td>
+                                            <td class="text-center">{{ student.last_name }}</td>
+                                            <td class="text-center">{{ student.student_id }}</td>
+                                            <td class="text-center">{{ student.number_of_unit }}</td>
+                                            <td class="text-center">{{ student.grade }}</td>
+                                            <td class="text-center table-light">
+                                                <a class="" href="/editProfile?id={{ student.student_id }}">
+                                                    <span class="far fa-edit"></span> ویرایش
+                                                </a>
+                                            </td>
+                                        </tr>
+                                    {% endfor %}
+                                <tr>
+
+                                </tbody>
+                            </table>
+                        </div>
+                    </section>{% endcomment %}

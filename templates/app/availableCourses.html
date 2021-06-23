@@ -1,0 +1,75 @@
+{% extends 'app/base.html' %}
+
+{% block title %} دروس ارایه شده{% endblock %}
+
+{% block content %}
+
+    {% if detail %}
+        {% for item in detail %}
+            {% if item.list|length > 0 %}
+
+                <div class="row">
+                    <div class="col-md-12 col-lg-12">
+                        <div class="table-courses">
+
+                            <div class="card hoverable">
+                                <div class="gradient-card-header blue-gradient py-2 mx-4 mb-3 d-flex justify-content-center align-items-center">
+                                    <a class="white-text mx-3 font19">{{ item.name }}</a>
+                                </div>
+                                <!--            <div class="">-->
+                                <div class="px-4">
+                                    <!--Table-->
+                                    <div class="table-responsive">
+                                        <table class="table table-hover mb-0 text-center">
+
+                                            <!--Table head-->
+                                            <thead class="font17">
+                                            <tr>
+
+                                                <th class="th-lg font17">نام درس</th>
+                                                <th class="th-lg font17">کد درس</th>
+                                                <th class="th-lg font17">تعداد واحد</th>
+                                                <th class="th-lg font17">استاد درس</th>
+                                                <th class="th-lg font17">تعداد دانشجو</th>
+                                                <th class="th-lg font17"></th>
+                                            </tr>
+                                            </thead>
+                                            <!--Table head-->
+
+                                            <!--Table body-->
+                                            <tbody>
+                                            {% for course in item.list %}
+                                                <tr>
+                                                    <td class="">{{ course.name }}</td>
+                                                    <td class="">{{ course.id }}</td>
+                                                    <td class="">{{ course.unit }} واحدی</td>
+                                                    <td class=""> {{ course.Teacher }}</td>
+                                                    <td class="">{{ course.number_of_student }}</td>
+                                                    <td class="text-center icon--cart">
+                                                        <a class="" href="?ci={{ course.id }}" onclick="showSaveAlert();">
+                                                            <i class="fa fa-cart-plus"></i> اخذ
+                                                        </a>
+                                                    </td>
+                                                </tr>
+
+                                            {% endfor %}
+                                            </tbody>
+                                            <!--Table body-->
+                                        </table>
+                                    </div>
+                                    <!--Table-->
+
+                                </div>
+                                <!--            </div>-->
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            {% endif %}
+        {% endfor %}
+    {% endif %}
+
+
+{% endblock %}
+

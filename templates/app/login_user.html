@@ -1,0 +1,65 @@
+{% load static %}
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title></title>
+    <script type="text/javascript" src="{% static 'app/js/jquery.min.js' %}"></script>
+    <link rel="stylesheet" href="{% static 'app/css/bootstrap.min.css' %}">
+    <link rel="stylesheet" href="{% static 'app/css/bootstrap-rtl.min.css' %}">
+    <link rel="stylesheet" href="{% static 'app/css/bootstrap-rtl.css' %}">
+    <!-- Material Design Bootstrap -->
+    <link rel="stylesheet" href="{% static 'app/css/mdb.min.css' %}">
+    <!-- Your custom styles (optional) -->
+    <link rel="stylesheet" href="{% static 'app/css/toastr.min.css' %}">
+    {#    <!-- Material Design Bootstrap -->#}
+    <link rel="stylesheet" href="{% static 'app/css/login.css' %}">
+</head>
+
+<body>
+<div class="container">
+    {% if messages %}
+        {% for message in messages %}
+            <script type=text/javascript>
+                $(function () {
+                    toastr.{{ message.tags }}('{{ message }}')
+                })
+            </script>
+        {% endfor %}
+    {% endif %}
+    <div class="login-form">
+        <form class="box" action="" method="post">
+            {% csrf_token %}
+            <h1>لطفا وارد شوید</h1>
+            <div class="form-group">
+                <input type="text" name="username" required="required" placeholder="نام کاربری"/>
+            </div>
+            <div class="form-group">
+                <input type="password" name="password" required="required" placeholder="رمز عبور"/>
+            </div>
+{#            <div class="form-group"></div>#}
+            <input type="submit" class="btn waves-effect font18" name="" value="ورود"/>
+        </form>
+    </div>
+
+</div>
+
+
+</body>
+
+<!-- Bootstrap tooltips -->
+<script type="text/javascript" src="{% static 'app/js/popper.min.js' %}"></script>
+<!-- Bootstrap core JavaScript -->
+<script type="text/javascript" src="{% static 'app/js/bootstrap.min.js' %}"></script>
+<!-- MDB core JavaScript -->
+<script type="text/javascript" src="{% static 'app/js/mdb.min.js' %}"></script>
+<!-- Toastr -->
+<script type="text/javascript" src="{% static 'app/js/toastr.min.js' %}"></script>
+<script type="text/javascript" src="{% static 'app/js/toastrsample.js' %}"></script>
+
+<!-- Your custom scripts (optional) -->
+<script src="{% static 'app/js/login.js' %}"></script>
+</html>

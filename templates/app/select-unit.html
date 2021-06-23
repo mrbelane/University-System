@@ -1,0 +1,135 @@
+‌‌‌‌‌{% extends 'app/base.html' %}
+‌
+{% block title %} انتخاب واحد{% endblock %}
+
+{% block content %}
+    <div class="row">
+        <div class="col-md-12 col-lg">
+            <div class="table-courses">
+                <div class="card hoverable">
+                    <div class="gradiant-header1 py-2 mx-4 mb-3 d-flex justify-content-center align-items-center">
+                        <a href="" class="white-text mx-3 font19">دروس انتخاب شده (سبد خرید)</a>
+                    </div>
+                    <!--            <div class="">-->
+                    <div class="px-4">
+                        <!--Table-->
+                        <div class="table-responsive">
+                            <table class="table table-hover mb-0 text-center">
+
+                                <!--Table head-->
+                                <thead class="font17">
+                                <tr>
+                                    <th class="th-md font17">نام درس</th>
+                                    <th class="th-md font17">کد درس</th>
+                                    <th class="th-md font17">تعداد واحد</th>
+                                    <th class="th-md font17">استاد درس</th>
+                                    {#                                    <th class="th-lg font17">تعداد دانشجوی اخذ شده</th>#}
+                                </tr>
+                                </thead>
+                                <!--Table head-->
+
+                                <!--Table body-->
+                                {% if bagCourse %}
+                                    {% for  course in bagCourse %}
+                                        <tbody>
+                                        <tr>
+
+                                            <td class="">{{ course.name }}</td>
+                                            <td class="">{{ course.id }}</td>
+                                            <td class="">{{ course.unit }} واحدی</td>
+                                            <td class="">دکتر {{ course.Teacher.last_name }}</td>
+                                            <td class="text-center">
+                                                <a class="btn btn-danger btn- btn-sm waves-effect"
+                                                   href="?action=db&ci={{ course.id }}" onclick="confirm('از حذف درس مطمین هستید؟!');">
+                                                    <i class="far fa-trash-alt"></i> حذف
+                                                </a>
+                                            </td>
+
+                                            {#                                    <td class="">40</td>#}
+                                        </tr>
+                                        </tbody>
+
+
+                                    {% endfor %}
+
+
+
+                                {% endif %}
+
+                                <!--Table body-->
+                            </table>
+                        </div>
+                        <!--Table-->
+
+                    </div>
+                    <!--            </div>-->
+
+                </div>
+                {% if bagCourse|length > 0%}
+                <button type="button"
+                        onclick="window.location.href='?action=ib'; confirm('تایید نهایی درس؟')"
+                        class="btn btn-primary mt-2 waves-effect">تایید نهایی</button>
+
+                {% endif%}
+            </div>
+        </div>
+        <div class="col-md-12 col-lg">
+            <div class="table-courses">
+                <div class="card hoverable">
+                    <div class="gradiant-header py-2 mx-4 mb-3 d-flex justify-content-center align-items-center">
+                        <a href="" class="white-text mx-3 font19">دروس نهایی</a>
+                    </div>
+                    <!--            <div class="">-->
+                    <div class="px-4">
+                        <!--Table-->
+                        <div class="table-responsive">
+                            <table class="table table-hover mb-0 text-center">
+
+                                <!--Table head-->
+                                <thead class="font17">
+                                <tr>
+                                    <th class="th-md font17">نام درس</th>
+                                    <th class="th-md font17">کد درس</th>
+                                    <th class="th-md font17">تعداد واحد</th>
+                                    <th class="th-md font17">استاد درس</th>
+                                </tr>
+                                </thead>
+
+                                {% if takeCourse %}
+                                    {% for  item in takeCourse %}
+                                        <tbody>
+                                        <tr>
+
+                                            <td class="">{{ item.Course.name }}</td>
+                                            <td class="">{{ item.Course.id }}</td>
+                                            <td class="">{{ item.Course.unit }} واحدی</td>
+                                            <td class="">دکتر {{ item.Course.Teacher.last_name }}</td>
+                                            <td class="text-center">
+                                                <a class="btn btn-danger btn-sm waves-effect"
+                                                   href="?action=dt&ci={{ item.Course.id }}" onclick="confirm('از حذف درس مطمین هستید؟!');">
+                                                    <i class="far fa-trash-alt"></i> حذف
+                                                </a>
+                                            </td>
+                                            {#                                    <td class="">40</td>#}
+                                        </tr>
+                                        </tbody>
+
+
+                                    {% endfor %}
+
+
+
+                                {% endif %}
+                                <!--Table body-->
+                            </table>
+                        </div>
+                        <!--Table-->
+
+                    </div>
+                    <!--            </div>-->
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}
+

@@ -1,0 +1,180 @@
+.profile-card {
+  color: #fff;
+  margin: 10px auto;
+  background: #343a40 !important;
+  max-width: 450px;
+  width: 450px;
+  box-shadow: 0 10px 25px 5px rgba(0, 0, 0, 0.2); }
+  .profile-card .top-card {
+    height: 88px;
+    width: 100%;
+    animation: moveInTop 1s ease-out .5s;
+    animation-fill-mode: backwards;
+    background: crimson; }
+  .profile-card .picture {
+    transform: translateY(-60px);
+    height: 130px;
+    width: 130px;
+    background: white;
+    overflow: hidden;
+    border-radius: 50%;
+    border: solid 8px #ffffff; }
+  .profile-card .picture img {
+    border-radius: 50%;
+    width: 100%;
+    min-height: 100%;
+    transition: all 0.9s ease 0s;
+    object-fit: cover;
+    /* transform: scale(1); */ }
+  .profile-card .profile-card:hover .picture img {
+    box-shadow: 0 0 0 14px #f7f5ec;
+    /* transform: scale(0.7); */ }
+  .profile-card .full-name {
+    animation: moveInRight 1s ease-out;
+    text-align: center;
+    margin-top: 1px;
+    background-color: #61d4ae;
+    padding: 10px;
+    width: 270px;
+    clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 16% 100%, 6% 0%); }
+    .profile-card .full-name p {
+      text-align: center;
+      margin: 0; }
+  .profile-card .job {
+    clip-path: polygon(0% 0%, 87% 0%, 100% 100%, 0% 100%, 0% 0%);
+    animation: moveInLeft 1s ease-out;
+    text-align: center;
+    width: 257px;
+    padding: 10px;
+    background-color: #61d4ae; }
+    .profile-card .job p {
+      margin: 0 auto; }
+  .profile-card .job, .profile-card .full-name {
+    margin-bottom: 0;
+    font-size: 16px;
+    text-align: center; }
+  .profile-card .card-content {
+    margin: 20px; }
+  .profile-card .card-content .info-right {
+    animation: moveInRight 1s ease-out; }
+  .profile-card .card-content .info-left {
+    animation: moveInLeft 1s ease-out; }
+  .profile-card .btn:link, .profile-card .btn:visited {
+    text-align: center;
+    background-color: #9b9b9b;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: #ffffff;
+    padding: 15px 40px;
+    display: inline-block;
+    border-radius: 100px;
+    align-self: center;
+    margin: 30px;
+    transition: all .3s;
+    position: relative; }
+  .profile-card .btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); }
+  .profile-card .btn:active {
+    transform: translateY(-1px);
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2); }
+  .profile-card .btn--white {
+    background-color: #d4e6e9;
+    color: #4194ff; }
+  .profile-card .btn::after {
+    content: "";
+    display: inline-block;
+    height: 100%;
+    width: 100%;
+    border-radius: 100px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    transition: all .4s; }
+  .profile-card .btn--white::after {
+    background-color: #fff; }
+  .profile-card .btn:hover::after {
+    transform: scaleX(1.4) scaleY(1.6);
+    opacity: 0; }
+  .profile-card .btn--animated {
+    animation: moveInBottom .5s ease-out .75s;
+    animation-fill-mode: backwards; }
+  .profile-card ul.social-network {
+    list-style: none;
+    display: inline;
+    margin-left: 0 !important;
+    padding: 0; }
+  .profile-card ul.social-network li {
+    display: inline;
+    margin: 0 5px; }
+  .profile-card .social-network a.icoTelegram:hover {
+    background-color: #0088cc; }
+  .profile-card .social-network a.icoLinkedin:hover {
+    background-color: #2867B2; }
+  .profile-card .social-network a.icoInstagram:hover {
+    background-color: #BD3518; }
+  .profile-card .social-network a.icoTelegram:hover i,
+  .profile-card .social-network a.icoLinkedin:hover i,
+  .profile-card .social-network a.icoInstagram:hover i {
+    color: #fff; }
+  .profile-card a.socialIcon:hover,
+  .profile-card .socialHoverClass {
+    color: #44BCDD; }
+  .profile-card .social-circle li a {
+    display: inline-block;
+    position: relative;
+    margin: 0 auto 0 auto;
+    border-radius: 50%;
+    text-align: center;
+    width: 50px;
+    height: 50px;
+    font-size: 20px; }
+  .profile-card .social-circle li i {
+    margin: 0;
+    line-height: 50px;
+    text-align: center; }
+  .profile-card .social-circle li a:hover i,
+  .profile-card .triggeredHover {
+    transform: rotate(360deg);
+    transition: all 0.2s; }
+  .profile-card .social-circle i {
+    color: #fff;
+    transition: all 0.8s;
+    transition: all 0.8s; }
+
+@keyframes moveInLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-100px); }
+  80% {
+    transform: translateX(10px); }
+  100% {
+    opacity: 1;
+    transform: translateX(0); } }
+
+@keyframes moveInRight {
+  0% {
+    opacity: 0;
+    transform: translateX(100px); }
+  80% {
+    transform: translateX(-10px); }
+  100% {
+    opacity: 1;
+    transform: translateX(0); } }
+
+@keyframes moveInBottom {
+  0% {
+    opacity: 0;
+    transform: translateY(30px); }
+  100% {
+    opacity: 1;
+    transform: translate(0); } }
+
+@keyframes moveInTop {
+  0% {
+    opacity: 0;
+    transform: translateY(-30px); }
+  100% {
+    opacity: 1;
+    transform: translate(0); } }

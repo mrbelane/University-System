@@ -1,0 +1,64 @@
+.material-input {
+  padding: 30px 0 0 0;
+  position: relative;
+  height: 90px;
+
+  &::after {
+    content: '';
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    background: #e2e2e2;
+    bottom: 0;
+    right: 0;
+    transition: transform 400ms ease;
+    background: #35ccde;
+    transform: scaleX(0);
+  }
+
+  &::before {
+    content: '';
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    background: #e2e2e2;
+    bottom: 0;
+    right: 0;
+    transition: transform 400ms ease;
+  }
+
+  .material-label {
+    color: #c7c7c7;
+    font-size: 14px;
+    transform: translateY(22px);
+    display: block;
+    transition: transform 400ms ease;
+  }
+}
+
+.material-input.is-active {
+  &::after {
+    transform: scaleX(1);
+  }
+}
+
+.material-input.is-up {
+  .material-label {
+    font-size: 11px;
+    transform: translateY(0);
+  }
+}
+
+.input {
+  height: 40px;
+  width: 100%;
+  background: transparent;
+  position: relative;
+  padding: 8px 0;
+}
+
+.color-card-header{
+  background: #008BC8;
+}

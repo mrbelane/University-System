@@ -1,0 +1,67 @@
+
+.students {
+
+  .teacher-btn {
+    margin-right: 0;
+  }
+
+  .content-table {
+    min-height: 390px;
+    min-width: 660px;
+    border-radius: .25rem;
+    margin-bottom: 40px;
+    background: rgba(221, 221, 221, 0.41);
+
+    .bg-dark{
+      border-radius: .25rem;
+    }
+  }
+}
+
+
+.searchbox {
+  width: 270px;
+  height: 40px;
+  float: left;
+  position: relative;
+}
+
+.searchbox input[type=text] {
+  width: 100px;
+  height: 40px;
+  border: 0;
+  border-right: 1px solid #eee;
+  border-left: 1px solid #eee;
+  padding-right: 12px;
+  float: left;
+}
+
+.searchbox .btnSearchbox {
+  width: 44px;
+  height: 40px;
+  background: deepskyblue url(../img/search.png) no-repeat center;
+  display: block;
+  position: absolute;
+  top: 0;
+  left: -1px;
+
+}
+
+/* If the screen size is 600px wide or less, hide the element */
+//@media only screen and (max-width: 600px) {
+//  div.content-table {
+//    width: 500px;
+//  }
+//}
+
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+}
+
+::-webkit-scrollbar-thumb {
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+}

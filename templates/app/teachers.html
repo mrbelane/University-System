@@ -1,0 +1,67 @@
+{% extends 'app/base.html' %}
+
+{% block title %}صفحه ی اساتید {% endblock %}
+
+{% block content %}
+
+    <div class="card hoverable">
+        <div class="gradient-card-header blue-gradient py-2 mx-4 mb-3 d-flex justify-content-center align-items-center">
+            <a href="" class="white-text mx-3 font19">{{name}}</a>
+        </div>
+        <!--            <div class="">-->
+        <div class="px-4">
+            <!--Table-->
+            <div class="table-responsive-md">
+                <table class="table table-hover mb-0 text-center">
+
+                    <!--Table head-->
+                    <thead class="font17">
+                    <tr>
+                         <th class="th-lg font17">
+                            نام
+                        </th>
+                        <th class="th-lg font17">
+                           نام خانوادگی
+                        </th>
+                      <th class="th-lg font17">
+                           شماره ی پرسنلی
+                        </th>
+                        <th class="th-lg font17">
+                          رشته
+                        </th>
+                        <th class="th-lg font17">
+                            مرتبه علمی
+                        </th>
+
+                    </tr>
+                    </thead>
+                    <!--Table head-->
+                    <tbody>
+                    {%if teachers %}
+                        {% for teacher in teachers%}
+                        <tr>
+                            <td>{{teacher.first_name}}</td>
+                            <td>{{teacher.last_name}}</td>
+                            <td>{{teacher.teacher_id}}</td>
+                            <td>{{teacher.major}}</td>
+                            <td>{{teacher.grade}}</td>
+                        </tr>
+                        {% endfor %}
+                    {% endif %}
+
+                    <!--Table body-->
+                  
+                  
+                    </tbody>
+                    <!--Table body-->
+                </table>
+            </div>
+            <!--Table-->
+
+        </div>
+        <!--            </div>-->
+
+    </div>
+
+{% endblock %}
+

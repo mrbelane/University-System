@@ -1,0 +1,117 @@
+* {
+  padding: 0;
+  margin: 0;
+  border: 0;
+  outline: 0;
+  box-sizing: border-box; }
+
+@font-face {
+  font-family: Vazir;
+  src: url("../fonts/Vazir.eot?#") format("embedded-opentype"), url("../fonts/Vazir.ttf") format("truetype"); }
+
+@font-face {
+  font-family: SOGAND;
+  src: url("../fonts/SOGAND.ttf") format("truetype"); }
+
+.font10 {
+  font: 10px Vazir; }
+
+.font11 {
+  font: 11px Vazir; }
+
+.font12 {
+  font: 12px Vazir; }
+
+.font13 {
+  font: 13px Vazir; }
+
+.font14 {
+  font: 14px Vazir; }
+
+.font15 {
+  font: 15px Vazir; }
+
+.font16 {
+  font: 16px Vazir; }
+
+.font17 {
+  font: 17px Vazir; }
+
+.font18 {
+  font: 18px Vazir; }
+
+.font19 {
+  font: 19px Vazir; }
+
+.fontS {
+  font: 45px SOGAND; }
+
+body {
+  font-size: 18px;
+  font-family: Vazir; }
+
+header {
+  font-size: 18px; }
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Vazir, sans-serif;
+  background: #34495e; }
+  body .login-form {
+    width: 100%;
+    margin: auto;
+    max-width: 525px;
+    position: relative;
+    min-height: 600px;
+    margin: 46px auto;
+    background: url(https://raw.githubusercontent.com/khadkamhn/day-01-login-form/master/img/bg.jpg) no-repeat center; }
+    body .login-form .box {
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+      padding: 50px;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      text-align: center;
+      padding: 90px 70px 50px 70px;
+      background: rgba(40, 57, 101, 0.9); }
+      body .login-form .box h1 {
+        color: white;
+        font-weight: 500; }
+      body .login-form .box input[type="text"], body .login-form .box input[type="password"] {
+        font-family: Vazir;
+        border: 0;
+        background: none;
+        display: block;
+        margin: 20px auto;
+        text-align: center;
+        border: 2px solid #3498db;
+        padding: 14px 10px;
+        width: 300px;
+        outline: none;
+        color: white;
+        border-radius: 24px;
+        transition: 0.25s; }
+      body .login-form .box input[type="text"]:focus, body .login-form .box input[type="password"]:focus {
+        width: 380px;
+        border-color: #2ecc71; }
+      body .login-form .box input[type="submit"] {
+        border: 0;
+        background-color: #6B92A4;
+        display: block;
+        margin: 20px auto;
+        width: 170px;
+        font-family: Vazir;
+        text-align: center;
+        border: 2px solid #2ecc71;
+        padding: 14px 40px;
+        outline: none;
+        color: white;
+        border-radius: 24px;
+        transition: 0.25s;
+        cursor: pointer; }
+        body .login-form .box input[type="submit"]:hover {
+          background-color: #2ecc71; }

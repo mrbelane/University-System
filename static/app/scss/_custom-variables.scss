@@ -1,0 +1,70 @@
+* {
+  padding: 0;
+  margin: 0;
+  border: 0;
+  outline: 0;
+  box-sizing: border-box;
+}
+
+@font-face {
+  font-family: Vazir;
+  src: url("../fonts/Vazir.eot?#") format("embedded-opentype"), url("../fonts/Vazir.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: SOGAND;
+  src: url("../fonts/SOGAND.ttf") format("truetype");
+}
+
+.font10 {
+  font: 10px Vazir;
+}
+
+.font11 {
+  font: 11px Vazir;
+}
+
+.font12 {
+  font: 12px Vazir;
+}
+
+.font13 {
+  font: 13px Vazir;
+}
+
+.font14 {
+  font: 14px Vazir;
+}
+
+.font15 {
+  font: 15px Vazir;
+}
+
+.font16 {
+  font: 16px Vazir;
+}
+
+.font17 {
+  font: 17px Vazir;
+}
+
+.font18 {
+  font: 18px Vazir;
+}
+
+.font19 {
+  font: 19px Vazir;
+}
+
+.fontS {
+  font: 45px SOGAND;
+}
+
+body {
+  font-size: 18px;
+  font-family: Vazir;
+}
+
+header {
+  font-size: 18px;
+}
